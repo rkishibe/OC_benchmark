@@ -18,7 +18,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
-import testbench.Testbench;
+import com.example.oc_lab_benchmark.testbench.Testbench;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
