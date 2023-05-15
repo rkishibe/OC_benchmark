@@ -2,8 +2,10 @@ package com.example.oc_lab_benchmark.benchTests;
 import java.util.ArrayList;
 import java.util.List;
 
-    public class wPrime {
-
+    public class wPrime implements IBenchmark {
+        List<Integer> primes;
+        int num;
+        int n = 10;
         public static boolean isPrime(int n) {
             if (n <= 1) {
                 return false;
@@ -24,10 +26,11 @@ import java.util.List;
             return true;
         }
 
-        public static List<Integer> wprime(int n) {
-            List<Integer> primes = new ArrayList<>();
-            int num = 2;
-            while (primes.size() < n) {
+
+        @Override
+        public void run() {
+            initialize();
+            for (long i=0; i<primes.size();i++){
                 if (isPrime(num)) {
                     int reversed = Integer.parseInt(new StringBuilder(String.valueOf(num)).reverse().toString());
                     if (isPrime(reversed)) {
@@ -36,13 +39,23 @@ import java.util.List;
                 }
                 num++;
             }
-            return primes;
+
         }
 
-        public static void main(String[] args) {
-            int n = 10;
-            List<Integer> wprimeNumbers = wprime(n);
-            System.out.println("The first " + n + " wprime numbers are: " + wprimeNumbers);
+        @Override
+        public void initialize(Object... params) {
+             primes = new ArrayList<>();
+             num = 2;
+        }
+
+        @Override
+        public void clean() {
+
+        }
+
+        @Override
+        public void cancel() {
+
         }
     }
 
