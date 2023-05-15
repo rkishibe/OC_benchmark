@@ -20,12 +20,6 @@ import javafx.stage.Stage;
 
 import com.example.oc_lab_benchmark.testbench.Testbench;
 
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
 public class Main extends Application {
 
     private TextField scoreTextField;
