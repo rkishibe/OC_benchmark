@@ -1,4 +1,4 @@
-package com.example.oc_lab_benchmark.testbench;
+package com.example.oc_lab_benchmark.benchTests;
 import java.util.ArrayList;
 import java.util.List;
 
